@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([a-zA-Z]+)$ index.php?page=$1
+
+RewriteRule ^guest/del/([0-9]+)$ index.php?page=guest&command=del&id=$1
+RewriteRule ^guest/edit/([0-9]+)$ index.php?page=guest&command=edit&id=$1
